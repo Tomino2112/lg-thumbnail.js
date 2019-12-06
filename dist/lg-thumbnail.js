@@ -1,5 +1,5 @@
 /**!
- * lg-thumbnail.js | 1.0.0 | August 8th 2018
+ * lg-thumbnail.js | 1.1.1 | December 6th 2019
  * http://sachinchoolur.github.io/lg-thumbnail.js
  * Copyright (c) 2016 Sachin N; 
  * @license GPLv3 
@@ -42,6 +42,7 @@
         thumbWidth: 100,
         thumbContHeight: 100,
         thumbMargin: 5,
+        thumbSrcAttr: 'src',
 
         exThumbImage: false,
         showThumbByDefault: true,
@@ -178,7 +179,7 @@
                 thumbImg = thumb;
             }
 
-            thumbList += '<div data-vimeo-id="' + vimeoId + '" class="lg-thumb-item" style="width:' + _this.core.s.thumbWidth + 'px; margin-right: ' + _this.core.s.thumbMargin + 'px"><img src="' + thumbImg + '" /></div>';
+            thumbList += '<div data-vimeo-id="' + vimeoId + '" class="lg-thumb-item" style="width:' + _this.core.s.thumbWidth + 'px; margin-right: ' + _this.core.s.thumbMargin + 'px"><img ' + _this.core.s.thumbSrcAttr + '="' + thumbImg + '" /></div>';
             vimeoId = '';
         }
 

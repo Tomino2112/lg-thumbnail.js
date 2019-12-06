@@ -7,6 +7,7 @@ var thumbnailDefaults = {
     thumbWidth: 100,
     thumbContHeight: 100,
     thumbMargin: 5,
+    thumbSrcAttr: 'src',
 
     exThumbImage: false,
     showThumbByDefault: true,
@@ -146,7 +147,7 @@ Thumbnail.prototype.build = function() {
             thumbImg = thumb;
         }
 
-        thumbList += '<div data-vimeo-id="' + vimeoId + '" class="lg-thumb-item" style="width:' + _this.core.s.thumbWidth + 'px; margin-right: ' + _this.core.s.thumbMargin + 'px"><img src="' + thumbImg + '" /></div>';
+        thumbList += `<div data-vimeo-id="${vimeoId}" class="lg-thumb-item" style="width:${_this.core.s.thumbWidth}px; margin-right: ${_this.core.s.thumbMargin}px"><img ${_this.core.s.thumbSrcAttr}="${thumbImg}" /></div>`;
         vimeoId = '';
     }
 
